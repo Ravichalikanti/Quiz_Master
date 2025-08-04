@@ -1,0 +1,337 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+.input-box {
+  padding: 14px 22px;
+  font-size: 17px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333;
+  width: 100%;
+  max-width: 280px;
+  margin: 10px 0;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='10'><polygon points='0,0 14,0 7,10' fill='%23333'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 12px;
+}
+
+.page-button {
+  margin-top: 20px;
+  padding: 14px 28px;
+  font-size: 16px;
+  background-color: #022644;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.page-button:hover {
+  background-color: #42a5f5;
+}
+.options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.option-btn {
+  padding: 12px 24px;
+  width: 100%;
+  max-width: 300px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.option-btn.selected {
+  background-color: #1190cb;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 10px #1190cb;
+}
+.quiz-box {
+  background: rgba(0, 0, 0, 0.2); /* Slight dark blur */
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 90%;
+  margin: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.role-switch-box {
+  display: flex;
+  width: 90%;
+  max-width: 320px;
+  margin: 0 auto 20px auto;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.role-option {
+  flex: 1;
+  padding: 12px 0;
+  text-align: center;
+  background-color: #ddd;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.role-option.selected-role {
+  background-color: #1190cb;
+  color: white;
+  font-weight: bold;
+}
+
+.leaderboard-container {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.leaderboard-box {
+  background-color: #0f2027;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 900px;
+  color: #fff;
+}
+
+.leaderboard-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.leaderboard-filters {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.leaderboard-select {
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 10px;
+  text-align: center; /* 👈 ensures perfect alignment under header */
+  vertical-align: middle; /* 👈 aligns content vertically */
+  white-space: nowrap; /* 👈 prevents wrapping of Roll No */
+}
+
+.leaderboard-highlighted {
+  background-color: rgba(100, 181, 246, 0.2);
+  font-weight: bold;
+}
+.certificate-wrapper {
+  padding: 20px;
+}
+
+.certificate-box {
+  position: relative;
+  width: 1000px;     /* Set this to match your background image width */
+  height: 700px;     /* Set this to match your background image height */
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;  /* Prevent anything from overflowing */
+}
+
+
+.certificate-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.certificate-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  padding: 40px;
+  box-sizing: border-box;
+  color: #d4af37; /* or white depending on your bg image */
+}
+  
+.certificate-title {
+  color: goldenrod;
+  font-size: 47px;
+  font-weight: bolder;
+}
+
+.certificate-name {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 10px 0;
+  z-index: 2;
+  position: relative;
+  color: #d7da2f;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+
+.certificate-line {
+  color: #E0E0E0;
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.certificate-motivation {
+  font-style: italic;
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.certificate-signature {
+  position: absolute;
+  right: 350px;
+  bottom: 100px;
+  text-align: center;
+  font-size: 14px;
+  color: aliceblue;
+   font-family: Arial, sans-serif;
+  /* z-index: 2; */
+}
+.signature-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  color: rgb(255, 204, 0);
+  margin-bottom: -5px;
+}
+.certificate-wrapper{
+  background: #19364a;
+}
+
+
+.leaderboard-highlighted {
+  background-color: #022370; /* light yellow for current user */
+  font-weight: bold;
+}
+
+
+
+.dashboard-container {
+  min-height: 91.9vh;
+  background: linear-gradient(to right, #002244, #004466);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+}
+
+
+.dashboard-welcome {
+  color: aliceblue;
+  align-self: flex-start;
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.dashboard-name {
+  font-weight: bold;
+  color: #007bff; /* Blue highlight */
+}
+
+.dashboard-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  align-items: center;
+}
+.dashboard-container{
+ background: linear-gradient(to right, #0f2027, #203a43, #2c5364);  
+}
+
+.certificate-list-container {
+  padding: 30px;
+  min-height: 100vh;
+   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);/* Light blue-gray background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certificate-list-container h2 {
+  font-size: 28px;
+  color: #1a237e;
+  margin-bottom: 20px;
+}
+
+.certificate-card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.certificate-card:hover {
+  transform: scale(1.02);
+}
+
+.certificate-card p {
+  margin: 10px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+
